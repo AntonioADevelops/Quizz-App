@@ -1,8 +1,6 @@
 $(document).ready(function() {
-    var items = {
-        "Question 1":"Answer 1",
-        "Question 2":"Answer 2",
-        "Questions 3":"Answer 3",
-    };
-    $("#btn1").text("Hello world!");
+    const Questions = ["Question1", "Question2", "Question3", "Question4", "Question5"];
+    const Correct = ["Correct1", "Correct2", "Correct3", "Correct4", "Correct5"]
+    const Wrong = ["Wrong1", "Wrong2", "Wrong3", "Wrong4", "Wrong5", "Wrong6", "Wrong7", "Wrong8", "Wrong9", "Wrong10"]
+    const Correspond = ["1", "2", "3", "4", "5"]
 });
