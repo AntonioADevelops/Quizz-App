@@ -19,6 +19,9 @@ body {
 #playagain {
     font-size: 25px; 
 }
+#restart {
+    font-size: 25px;
+}
 .card {
     font-weight: bold;
     font-size: 40px;
