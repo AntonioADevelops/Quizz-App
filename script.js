@@ -5,6 +5,24 @@ $(document).ready(function() {
     const Right = ["Wrong8", "Wrong9", "Answer3", "Wrong10", "Answer5",]
     const Correct = ["Left", "Middle", "Right", "Middle", "Right",]
     let QuestionNumber = 0
+    for (let i = Questions.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i)
+        let k = Questions[i]
+        Questions[i] = Questions[j]
+        Questions[j] = k
+        k = Left[i]
+        Left[i] = Left[j]
+        Left[j] = k
+        k = Middle[i]
+        Middle[i] = Middle[j]
+        Middle[j] = k
+        k = Right[i]
+        Right[i] = Right[j]
+        Right[j] = k
+        k = Correct[i]
+        Correct[i] = Correct[j]
+        Correct[j] = k
+    }   
     $("#question").text(Questions[QuestionNumber])
     $("#btn1").text(Left[QuestionNumber])
     $("#btn2").text(Middle[QuestionNumber])
