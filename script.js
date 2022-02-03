@@ -1,7 +1,9 @@
 $(document).ready(function() {
+    //device scaling//
     var siteWidth = 1280;
     var scale = screen.width /siteWidth;
     document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+    //Quizz Part//
     const Questions = ["What is This Kanji Used For 行", "What is This Kanji Used For 食", "What is the Meaning of あそびます", "What is This Kanji Used For 左", "What is This Kanji Used For 水",];
     const Left = ["To Go", "To Pray",  "To Walk", "Inside", "Tree",]
     const Middle = ["To Return", "To Drink", "To Go Out", "Left", "Fire",]
@@ -26,10 +28,12 @@ $(document).ready(function() {
         Correct[i] = Correct[j]
         Correct[j] = k
     }   
+    //set text//
     $("#question").text(Questions[QuestionNumber])
     $("#btn1").text(Left[QuestionNumber])
     $("#btn2").text(Middle[QuestionNumber])
     $("#btn3").text(Right[QuestionNumber])
+    //check correct in button 1//
     $("#btn1").click(function(){
         $(".text").css("visibility", "hidden");
         if(Correct[QuestionNumber]=="Left"){
@@ -39,6 +43,7 @@ $(document).ready(function() {
                 $(".good").css("visibility", "hidden");
                 $(".bad").css("visibility", "hidden");
                 $(".playagain").css("visibility", "visible");
+                //confetti//
                 const start = () => {
                     setTimeout(function() {
                         confetti.start()
@@ -270,6 +275,7 @@ $(document).ready(function() {
             $(".bad").css("visibility", "visible");
         }
     });
+    //check correct in button 2//
     $("#btn2").click(function(){
         $(".text").css("visibility", "hidden");
         if(Correct[QuestionNumber]=="Middle"){
@@ -279,6 +285,7 @@ $(document).ready(function() {
                 $(".good").css("visibility", "hidden");
                 $(".bad").css("visibility", "hidden");
                 $(".playagain").css("visibility", "visible");
+                //confetti//
                 const start = () => {
                     setTimeout(function() {
                         confetti.start()
@@ -510,6 +517,7 @@ $(document).ready(function() {
             $(".bad").css("visibility", "visible");
         }
     });
+    //check correct in button 3//
     $("#btn3").click(function(){
         $(".text").css("visibility", "hidden");
         if(Correct[QuestionNumber]=="Right"){
@@ -519,6 +527,7 @@ $(document).ready(function() {
                 $(".good").css("visibility", "hidden");
                 $(".bad").css("visibility", "hidden");
                 $(".playagain").css("visibility", "visible");
+                //confetti//
                 const start = () => {
                     setTimeout(function() {
                         confetti.start()
@@ -750,10 +759,12 @@ $(document).ready(function() {
             $(".bad").css("visibility", "visible");
         }   
     });
+    //display tryagain if wrong//
     $("#tryagain").click(function(){
         $(".bad").css("visibility", "hidden");
         $(".text").css("visibility", "visible");
     });
+    //display next questions if right//
     $("#next").click(function(){
         QuestionNumber=QuestionNumber+1;
         $("#question").text(Questions[QuestionNumber])
@@ -763,7 +774,7 @@ $(document).ready(function() {
         $(".good").css("visibility", "hidden");
         $(".text").css("visibility", "visible");
     });
-
+    //display restart when quiz is finished//
     $("#restart").click(function(){
         QuestionNumber = 0
         for (let i = Questions.length -1; i > 0; i--) {
