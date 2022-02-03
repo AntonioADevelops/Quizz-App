@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    const Questions = ["Question 1", "Question2", "Question3", "Question4", "Question5",];
-    const Left = ["Answer1", "Wrong1",  "Wrong2", "Wrong3", "Wrong4",]
-    const Middle = ["Wrong5", "Answer2", "Wrong6", "Answer4", "Wrong7",]
-    const Right = ["Wrong8", "Wrong9", "Answer3", "Wrong10", "Answer5",]
+    const Questions = ["What is the Meaning of This Kanji 行", "What is the Meaning of This Kanji 食", "What is the Meaning of あそびます", "What is the Meaning of This Kanji 左", "What is the Meaning of This Kanji 水",];
+    const Left = ["To Go", "To Pray",  "To Walk", "Inside", "Tree",]
+    const Middle = ["To Return", "To Drink", "To Go Out", "Left", "Fire",]
+    const Right = ["To Leave", "To Eat", "To Play", "North", "Water",]
     const Correct = ["Left", "Middle", "Right", "Middle", "Right",]
     let QuestionNumber = 0
     for (let i = Questions.length -1; i > 0; i--) {
