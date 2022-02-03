@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    var siteWidth = 1280;
+    var scale = screen.width /siteWidth;
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
     const Questions = ["What is This Kanji Used For 行", "What is This Kanji Used For 食", "What is the Meaning of あそびます", "What is This Kanji Used For 左", "What is This Kanji Used For 水",];
     const Left = ["To Go", "To Pray",  "To Walk", "Inside", "Tree",]
     const Middle = ["To Return", "To Drink", "To Go Out", "Left", "Fire",]
