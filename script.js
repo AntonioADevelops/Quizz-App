@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const Questions = ["What is the Meaning of This Kanji 行", "What is the Meaning of This Kanji 食", "What is the Meaning of あそびます", "What is the Meaning of This Kanji 左", "What is the Meaning of This Kanji 水",];
+    const Questions = ["What is This Kanji Used For 行", "What is This Kanji Used For 食", "What is the Meaning of あそびます", "What is This Kanji Used For 左", "What is This Kanji Used For 水",];
     const Left = ["To Go", "To Pray",  "To Walk", "Inside", "Tree",]
     const Middle = ["To Return", "To Drink", "To Go Out", "Left", "Fire",]
     const Right = ["To Leave", "To Eat", "To Play", "North", "Water",]
